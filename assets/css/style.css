@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 :root{
-    --primary-nav-color: #47986d;
-    -secondary-nav-color:  #3c805b;
+    --primary-nav-color: #38b974;
+    --secondary-nav-color:  #319960;
 }
 
 .list{
@@ -14,13 +16,12 @@
 .list-item{
     position: relative;
     background-color: var(--primary-nav-color);
-    border: 1px solid var(--secondary-nav-color);
 
     text-align: center;
     display: inline-block;
     font-size: 16px;
     margin: 0;
-    color: aliceblue;
+    color: white;
 }
 .sub-list{
     position: absolute;
@@ -32,7 +33,18 @@
     right: 0;
 }
 .sub-list-item{
+    position: relative;
     background-color: var(--primary-nav-color);
+   
+}
+.sub-list-women{
+    position: absolute;
+    display: none;
+    padding: 0;
+
+    top: 0;
+    left: 100%;
+    
 }
 .link{
     display: inline-block;
@@ -40,11 +52,11 @@
     color: inherit;
     background-color: var(--primary-nav-color);
     border: 1px solid var(--secondary-nav-color);
-    padding: 15px 20px;
-    width: 100%;
-
+    padding: 10px 20px;
+    min-width: 150px;
+ 
 }
-.list-item:hover{
+.link:hover{
     background-color: var(--secondary-nav-color);
 
 }
@@ -52,3 +64,8 @@
     display: block;
 
 }
+.sub-list >.sub-list-item:hover> .sub-list-women{
+    display: block;
+}
+p {
+    margin: 10vh;}
